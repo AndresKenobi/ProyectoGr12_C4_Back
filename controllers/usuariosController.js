@@ -50,6 +50,7 @@ module.exports = class UsuariosController {
             usuario.password = encryptPassword(usuario.password);
             const newUsuario = await usuarioModel.create(usuario);
             res.status(201).json({ data: newUsuario, message: "Te has registrado correctamente" });
+            console.log("Se registro -->", newUsuario);
         } catch (err) {
             res.status(500).json({ message: err.message });
         }
