@@ -4,7 +4,7 @@ const recetasSchema = mongoose.Schema({
     
     "nameReceta": String,
     "photoReceta": String,
-    "listaIngredientes": Object,  
+    "listaIngredientes": String,//String por ahora  
     //"nameIngre": Array(String),
     //"qtyIngre": Array(String),    
     "descReceta":String
