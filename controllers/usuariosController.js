@@ -36,6 +36,7 @@ module.exports = class UsuariosController {
                 });
 
                 res.status(200).json({ token, name: usuarioExistente.name });
+                console.log("Usuario Logueado:", usuarioExistente.name)
             } else {
                 res.status(401).json({ message: "usuario o clave invalido" });
             }
