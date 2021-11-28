@@ -9,7 +9,7 @@ module.exports = class RecetasController {
         } catch (err) {
             res.status(404).json({ message: err.message });
         }
-        
+
     }
 
     static async getByCode(req, res) {
@@ -18,6 +18,7 @@ module.exports = class RecetasController {
             const receta = await recetaModel.findOne({ "nameReceta": nameReceta });
             if (receta != null || receta != undefined) {
                 res.status(200).json(receta);
+                console.log("receta encontrda:", receta)
             } else {
                 res.status(404).json();
             }
