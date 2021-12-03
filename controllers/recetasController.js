@@ -43,8 +43,10 @@ module.exports = class RecetasController {
             const receta = req.body;
             const newReceta = await recetaModel.updateOne({ "nameReceta": nameReceta }, receta);
             res.status(200).json(newReceta);
+            //console.log("Actualizacion Positiva:", res.json(newReceta))
         } catch (err) {
             res.status(400).json({ message: err.message });
+            //console.log("Negacion Actualizacion:", err.message)
         }
     }
 
